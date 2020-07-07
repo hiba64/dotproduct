@@ -1,0 +1,32 @@
+PROCEDURE Dot_product(T1,T2: ARRAY_OF INTEGER[50],leng:INTEGER,ps:INTEGER)
+VAR
+    i:INTEGER;
+    ps:INTEGER:=0;
+
+BEGIN
+FOR i FROM 0 TO leng STEP 1  DO
+   ps:=ps+T1[i]*T2[i];
+   write(ps);
+END_FOR
+END
+ALGORITHM ortho_vectors
+VAR
+    v1,V2: ARRAY_OF INTEGER[50];
+    lengt:INTEGER;
+
+BEGIN
+   read(lengt);
+   FOR i FROM 0 TO lengt-1 STEP step  DO
+      read(V1[i]);
+   END_FOR
+   FOR i FROM 0 TO lengt-1 STEP step  DO
+      read(V2[i]);
+   END_FOR
+   Dot_product(V1,V2,lengt,pros)
+    IF ( pros = 0) THEN
+        Write("the vectors are orthogonals");
+    ELSE
+        Write("the vectors aren't orthogonals");
+    END_IF
+    END
+END
